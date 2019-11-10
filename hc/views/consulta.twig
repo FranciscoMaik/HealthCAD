@@ -1,0 +1,48 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<div class="" id="cadPac">
+  <h2>Consultas</h2>
+  <form class="form-group" id="cadpacientes" action="cadastrodepacientes.html" method="post">
+    <div class="row w-50 p-3">
+      <div class="col w-25 p-3">
+        <label for="">Nome do Paciênte</label>
+        <br>
+        <select class="form-control" name="">
+          <option value="v0" selected> -- Selecione --</option>
+          <option value="v1">Francisco</option>
+          <option value="v2">Maik</option>
+          <option value="v3">Fonseca</option>
+          <option value="v4">Nunes</option>
+        </select>
+        </div>
+        <div class="col w-25 p-3">
+          <label for="">Médico</label>
+          <br>
+          <select class="form-control" name="">
+            <option value="v0" selected> -- Selecione --</option>
+            <option value="v1">Dr. Francisco</option>
+            <option value="v2">Dr. Maik</option>
+            <option value="v3">Dr. Fonseca</option>
+            <option value="v4">Dr. Nunes</option>
+          </select>
+        </div>
+    </div>
+    <div class="row w-50 p-3">
+      <div class="col w-25 p-3">
+        <label for="">Data</label>
+        <br>
+        <input type="date" name="" value="" class="form-control">
+      </div>
+      <div class="col w-25 p-3">
+        <label for="">Hora</label>
+        <br>
+        <input type="time" name="" value="" class="form-control">
+      </div>
+    </div>
+    <br>
+    <button type="submit" name="enviar" class="button btn btn-primary btn-lg">Cadastrar</button>
+
+  </form>
+</div>
+{% endblock %}

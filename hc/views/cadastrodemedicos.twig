@@ -1,29 +1,32 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <div class="cadPac">
+  <div class="" id="cadPac">
     <h2>Cadastrar Médico</h2>
-    <form class="cadpacientes" action="cadastrodepacientes.html" method="post">
-      <label for="">Nome do Paciênte</label>
-      <br>
-      <input type="text" name="nome" value="" placeholder="Nome Completo">
-      <br>
-      <label for="">CRM</label>
-      <br>
-      <input type="text" name="cpf" value="" placeholder="CRM">
-      <br>
-      <label for="">Especialidade (s)</label>
-      <br>
-      <select name="select">
-        <option value="valor0" selected> -- Selecionar -- </option>
-        <option value="valor1">Especialidade 1</option>
-        <option value="valor2">Especialidade 2</option>
-        <option value="valor3">Especialidade 3</option>
-      </select>
-      <br>
-      <br>
-      <button type="submit" name="enviar">Cadastrar</button>
+    <div class="w-50 p-3">
+      <form class="form-group" id="cadpacientes" action="cadastrodepacientes.html" method="post">
+        <label for="">Nome do Paciênte</label>
+        <br>
+        <input type="text" class="form-control" name="nome" value="" placeholder="Nome Completo">
+        <br>
+        <label for="">CRM</label>
+        <br>
+        <input type="text" name="cpf" class="form-control" value="" placeholder="CRM">
+        <br>
+        <label for="">Especialidade (s)</label>
+        <br>
+        <div class="w-25 p-3">
+          <select name="select" class="form-control">
+            <option value="valor0" selected> -- Selecionar -- </option>
+            <option value="valor1">Especialidade 1</option>
+            <option value="valor2">Especialidade 2</option>
+            <option value="valor3">Especialidade 3</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit" class="button btn btn-primary btn-lg" name="enviar">Cadastrar</button>
 
-    </form>
+      </form>
+    </div>
   </div>
 {% endblock %}

@@ -1,16 +1,19 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <div class="home">
+  <div class="container-fluid" id="home">
     <h2>Home</h2>
-    <div class="selecaodate">
-      <label for="">Selecione o dia</label>
-      <br>
-      <br>
-      <input type="date" name="" value="">
-    </div>
-    <div class="mostarconsultas">
-      <label for="">Consultas do Dia</label>
+    <div class="row w-100 p-3">
+      <div class="col w-50 p-3" id="selecaodate">
+        <label for="">Selecione o dia</label>
+        <br>
+        <div class="w-50 p-3">
+          <input type="date" class="form-control" name="" value="">
+        </div>
+      </div>
+      <div class="col w-50 p-3" id="mostarconsultas">
+        <label for="">Consultas do dia</label>
+      </div>
     </div>
   </div>
 {% endblock %}

@@ -3,27 +3,75 @@
   <head>
     <title>HealthCAD</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/simple-sidebar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div class="menu">
-      <div class="imagem">
-          <span><img src="images/mlogo.png" alt="logo simbolizando a cruz da saúde com o H do nome do site" height="50px;"></span>
-          <span><h1 id="nomesite">HealthCAD</h1></span>
-          <span> <p id="opcoes">Opções</p></span>
+    <!--Java Script do bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--Scripts do Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+    <!--################################################################-->
+
+    <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"> <h1>Opções</h1> </div>
+      <div class="list-group list-group-flush">
+        <a href="/" class="list-group-item list-group-item-action">Home</a>
+        <a href="/cadastrodepacientes" class="list-group-item list-group-item-action">Cadastrar Paciênte</a>
+        <a href="/cadastrodemedicos" class="list-group-item list-group-item-action">Cadastrar Médico</a>
+        <a href="/pacientes" class="list-group-item list-group-item-action">Paciêntes</a>
+        <a href="/medicos" class="list-group-item list-group-item-action">Médicos</a>
+        <a href="/consulta" class="list-group-item list-group-item-action">Consultas</a>
       </div>
     </div>
+    <!-- /#sidebar-wrapper -->
 
-    <div class="navdireita">
-      <ul>
-        <li> <a href="/"> Home </a></li>
-        <li> <a href="/cadastrodepacientes"> Cadastrar Paciênte </a></li>
-        <li> <a href="/cadastrodemedicos"> Cadastrar Médico </a></li>
-        <li> <a href="/pacientes"> Paciêntes </a></li>
-        <li> <a href="/medicos"> Médicos </a></li>
-        <li> <a href="/consultas"> Consultas </a></li>
-      </ul>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg" id="fundo">
+        <button class="btn btn-ligth" id="menu-toggle">
+          <i class="material-icons">arrow_back</i></button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"> <i class="material-icons">menu</i> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a href="/">HealthCAD <img src="images/mlogo.png" alt="" width="40px"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        {% block body %}{% endblock %}
+      </div>
     </div>
+     <!--/#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
 
-    {% block body %}{% endblock %}
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
   </body>
 </html>

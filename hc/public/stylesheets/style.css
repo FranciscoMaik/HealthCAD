@@ -68,19 +68,19 @@ a {
 
 
 //Opções do Home
-.home{
+#home{
   text-align: center;
 }
-.home h2{
+#home h2{
   text-align: center;
   padding: 10px;
   font-size: 28px;
   color: #a0a0a0;
 }
 
-.selecaodate{
+#selecaodate{
   float: left;
-  width: 180px;
+  width: 400px;
   text-align: center;
   margin-left: 250px;
   color: #a0a0a0;
@@ -88,9 +88,10 @@ a {
   font-size: 24px;
 }
 
-.mostarconsultas{
+#mostarconsultas{
   float: right;
-  width: 200px;
+  text-align: center;
+  width: 400px;
   margin-right: 150px;
   color: #a0a0a0;
   font-weight: bold;
@@ -98,24 +99,25 @@ a {
 }
 
 //pagina de cadastro de paciênote
-.cadpacientes{
+#cadpacientes{
   padding: 50px;
 }
-.cadPac{
+#cadPac{
   text-align: left;
   margin-left: 40px;
   line-height: 40px;
 }
 
-.cadPac label{
+#cadPac label{
   font-weight: bold;
   font-size: 18px;
   color: #a0a0a0;
 }
 
-.cadPac h2{
+#cadPac h2{
   text-align: center;
   padding: 10px;
   font-size: 28px;
+  font-weight: bold;
   color: #a0a0a0;
 }

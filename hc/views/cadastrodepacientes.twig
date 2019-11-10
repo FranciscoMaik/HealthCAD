@@ -1,35 +1,37 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <div class="cadPac">
+  <div class="" id="cadPac">
     <h2>Cadastrar Paciênte</h2>
-    <form class="cadpacientes" action="cadastrodepacientes.html" method="post">
-      <label for="">Nome do Paciênte</label>
-      <br>
-      <input type="text" name="nome" value="" placeholder="Nome Completo">
-      <br>
-      <label for="">Data de Nascimento</label>
-      <br>
-      <input type="date" name="datadenascimento" value="">
-      <br>
-      <label for="">CPF</label>
-      <br>
-      <input type="text" name="cpf" value="" placeholder="CPF">
-      <br>
-      <label for="">Tipo Sanguineo</label>
-      <br>
-      <input type="text" name="tiposangue" value="" placeholder="Tipo Sanguineo">
-      <br>
-      <label for="">Telefone</label>
-      <br>
-      <input type= "Tel" name="telefone" value="" placeholder="Numero de Telefone">
-      <br>
-      <label for="">Descrições do Paciênte</label>
-      <br>
-      <textarea name="descricao" rows="8" cols="80"></textarea>
-      <br>
-      <button type="submit" name="enviar">Cadastrar</button>
+    <div class="w-50 p-3">
+      <form class="form-group" id="cadpacientes" action="cadastrodepacientes" method="post">
+        <label for="">Nome do Paciênte</label>
+        <br>
+        <input type="text" class="form-control" name="nomedopaciente" value="" placeholder="Nome Completo">
+        <br>
+        <label for="">Data de Nascimento</label>
+        <br>
+        <input type="date" class="form-control" name="datadenascimento" value="">
+        <br>
+        <label for="">CPF</label>
+        <br>
+        <input type="text" class="form-control" name="cpf" value="" placeholder="CPF">
+        <br>
+        <label for="">Tipo Sanguineo</label>
+        <br>
+        <input type="text" class="form-control" name="tiposangue" value="" placeholder="Tipo Sanguineo">
+        <br>
+        <label for="">Telefone</label>
+        <br>
+        <input type= "Tel" name="telefone" class="form-control" value="" placeholder="Numero de Telefone">
+        <br>
+        <label for="">Descrições do Paciênte</label>
+        <br>
+        <textarea name="descricao" rows="8" cols="80"></textarea>
+        <br>
+        <button type="submit" class="button btn btn-primary btn-lg" name="enviar">Cadastrar</button>
 
-    </form>
+      </form>
+    </div>
   </div>
 {% endblock %}
