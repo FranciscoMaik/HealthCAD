@@ -1,0 +1,121 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+*{
+  margin: 0;
+}
+.imagem{
+  text-align: left;
+}
+
+#nomesite{
+  text-align: center;
+  color: #ffffff;
+}
+
+#opcoes{
+  margin-right: 95px;
+  text-align: right;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.menu{
+  background-color: #6699ff;
+  margin: 10px 10px 0px 10px;
+  padding: 10px;
+  border-radius: 8px 8px 0 8px;
+}
+
+.navdireita{
+  margin-top: 0px;
+  float: right;
+  background-color: #6699ff;
+  width: 18%;
+  height: 100%;
+  margin-right: 10px;
+  border-radius: 0 0 8px 8px;
+  padding-top: 20px;;
+  padding-bottom: 28%
+}
+
+.navdireita ul li a:link{
+  text-decoration: none;
+}
+
+.navdireita ul li a{
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navdireita ul li a:hover{
+  color:#a0a0a0;
+  font-weight: bold;
+}
+
+.navdireita ul{
+  list-style: none;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+
+//Opções do Home
+.home{
+  text-align: center;
+}
+.home h2{
+  text-align: center;
+  padding: 10px;
+  font-size: 28px;
+  color: #a0a0a0;
+}
+
+.selecaodate{
+  float: left;
+  width: 180px;
+  text-align: center;
+  margin-left: 250px;
+  color: #a0a0a0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.mostarconsultas{
+  float: right;
+  width: 200px;
+  margin-right: 150px;
+  color: #a0a0a0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+//pagina de cadastro de paciênote
+.cadpacientes{
+  padding: 50px;
+}
+.cadPac{
+  text-align: left;
+  margin-left: 40px;
+  line-height: 40px;
+}
+
+.cadPac label{
+  font-weight: bold;
+  font-size: 18px;
+  color: #a0a0a0;
+}
+
+.cadPac h2{
+  text-align: center;
+  padding: 10px;
+  font-size: 28px;
+  color: #a0a0a0;
+}

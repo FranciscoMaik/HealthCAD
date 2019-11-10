@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthCAD</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="imagem">
+          <span><img src="images/mlogo.png" alt="logo simbolizando a cruz da saúde com o H do nome do site" height="50px;"></span>
+          <span><h1 id="nomesite">HealthCAD</h1></span>
+          <span> <p id="opcoes">Opções</p></span>
+      </div>
+    </div>
+
+    <div class="navdireita">
+      <ul>
+        <li> <a href="/"> Home </a></li>
+        <li> <a href="/cadastrodepacientes"> Cadastrar Paciênte </a></li>
+        <li> <a href="/cadastrodemedicos"> Cadastrar Médico </a></li>
+        <li> <a href="/pacientes"> Paciêntes </a></li>
+        <li> <a href="/medicos"> Médicos </a></li>
+        <li> <a href="/consultas"> Consultas </a></li>
+      </ul>
+    </div>
+
+    {% block body %}{% endblock %}
+  </body>
+</html>
