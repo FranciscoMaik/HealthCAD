@@ -16,6 +16,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -30,11 +31,15 @@ router.get("/cadastrodemedicos", function(req, res, next){
 });
 
 router.get('/pacientes', function(req, res, next){
-  res.render('pacientes')
+  getPacientes().then(pacientes =>{
+    res.render('pacientes', {pacientes});
+    });
 });
 
 router.get('/medicos', function(req, res, next){
-  res.render('medicos')
+  getMedicos().then(medicos => {
+    res.render('medicos', {medicos})
+  })
 });
 
 router.get('/consulta', function(req,res, next){
@@ -47,15 +52,13 @@ router.post("/cadastrodepacientes", function(req,res,next){
   var getBody = req.body;
   console.log(req.body.nomedopaciente);
   var paciente = {
-    nome: getBody.nome,
+    nome: getBody.nomedopaciente,
     nascimento: getBody.datadenascimento,
     cpf: getBody.cpf,
     tiposangue: getBody.tiposangue,
     tel: getBody.telefone,
     descricaopac: getBody.descricao
   };
-
-
 
   firebase.database()
   .ref()
@@ -67,5 +70,43 @@ router.post("/cadastrodepacientes", function(req,res,next){
     alert("Não foi possivel cadastrar o paciente")
   });
 });
+
+router.post("/cadastrodemedicos", function(req,res,next){
+  var getBody = req.body;
+  console.log(req.body.crm);
+  var medico = {
+    nome: getBody.nomemedico,
+    crm: getBody.crm,
+    especialidade: getBody.selectespecialidade
+  };
+
+  firebase.database()
+  .ref()
+  .child('medicos').push(medico)
+  .then(function(firebaseDatabase){
+    res.redirect('cadastrodemedicos');
+  })
+  .catch(function(error){
+    alert("Não foi possivel cadastrar o paciente")
+  });
+});
+
+//router.get('/', function(req, res, next) {
+//  getNoticias().then(noticia =>{
+//    res.render('index', {noticia});
+//  });
+//});
+
+
+function getPacientes(){
+  const ref = firebase.database().ref('pacientes');
+  return ref.once('value').then(snap => snap.val());
+};
+
+function getMedicos(){
+  const ref = firebase.database().ref('medicos');
+  return ref.once('value').then(snap => snap.val());
+};
+
 
 module.exports = router;

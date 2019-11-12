@@ -4,5 +4,13 @@
   <div class="cadPac" id="cadPac">
     <h2>Paciêntes</h2>
 
+    {% for pub in pacientes %}
+      <div id='mostrarpacientes'>
+        <label for="">{{pub.nome}}</label>
+        <br>
+      </div>
+
+    {% endfor %}
+
   </div>
 {% endblock %}

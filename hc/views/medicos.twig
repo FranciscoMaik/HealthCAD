@@ -3,6 +3,13 @@
 {% block body %}
   <div class="" id="cadPac">
     <h2>Médicos</h2>
+    {% for pub in medicos %}
+      <div id='mostrarpacientes'>
+        <label for="">{{pub.nome}}</label>
+        <br>
+      </div>
+
+    {% endfor %}
 
   </div>
 {% endblock %}
